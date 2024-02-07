@@ -72,25 +72,6 @@ class Course
         return $this->users;
     }
 
-    public function addUser(User $user): static
-    {
-        if (!$this->users->contains($user)) {
-            $this->users->add($user);
-            $user->addCourse($this);
-        }
-
-        return $this;
-    }
-
-    public function removeUser(User $user): static
-    {
-        if ($this->users->removeElement($user)) {
-            $user->removeCourse($this);
-        }
-
-        return $this;
-    }
-
     /**
      * @return Collection<int, UserCourseStatus>
      */

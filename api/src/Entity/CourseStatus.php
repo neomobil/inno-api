@@ -28,7 +28,6 @@ class CourseStatus
 
     public function __construct()
     {
-        $this->courses = new ArrayCollection();
         $this->userCourseStatuses = new ArrayCollection();
     }
 
